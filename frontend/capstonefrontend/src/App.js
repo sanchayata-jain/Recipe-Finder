@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import home from './././Components/home';
-import searchingredient from './Components/searchingredient';
-import Search from './././Components/search';
-import findrecipes from './Components/findrecipes';
-import signup from './Components/signup';
+import home from './Pages/home';
+import searchingredient from './Pages/searchingredient';
+import Search from './Components/search';
+import findrecipes from './Pages/findrecipes';
+import signup from './Pages/signup';
 
 
 function App() {

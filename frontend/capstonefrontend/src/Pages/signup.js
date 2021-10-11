@@ -1,7 +1,7 @@
 import React from 'react';
-import './nav.css';
-import Nav from './nav';
-import food4 from './food5.jpg';
+import '../Components/nav.css';
+import Nav from '../Components/nav';
+import food4 from '../Resources/food5.jpg';
 
 export default function signup() {
     return (

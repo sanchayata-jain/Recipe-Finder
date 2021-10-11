@@ -1,8 +1,8 @@
 import React from 'react';
-import './nav.css';
-import Nav from './nav';
-import food2 from './food3.jpg';
-import SearchBar from './search';
+import '../Components/nav.css';
+import Nav from '../Components/nav';
+import food2 from '../Resources/food3.jpg';
+import SearchBar from '../Components/search';
 
 export default function searchingredient() {
     return (

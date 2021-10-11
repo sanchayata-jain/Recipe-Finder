@@ -29,6 +29,11 @@ public class RecipeController {
         return recipeService.getAllRecipes();
     }
 
+    @GetMapping("/{recipeName}")
+    public List<Recipe> getRecipesByName(@PathVariable String recipeName) {
+        return recipeService.getRecipeByName(recipeName);
+    }
+
     @PostMapping("/add-recipe")
     @ResponseBody
     public void addRecipe(@RequestParam String recipeName,

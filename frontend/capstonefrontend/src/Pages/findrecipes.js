@@ -1,8 +1,8 @@
 import React from 'react';
-import './nav.css';
-import Nav from './nav';
-import food3 from './food4.jpg';
-import SearchBarFind from './findsearchbar';
+import '../Components/nav.css';
+import Nav from '../Components/nav';
+import food3 from '../Resources/food4.jpg';
+import SearchBarFind from '../Components/findsearchbar';
 
 export default function findrecipes() {
     return (

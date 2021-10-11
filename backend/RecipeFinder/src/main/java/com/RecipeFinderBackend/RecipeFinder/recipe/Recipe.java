@@ -1,6 +1,7 @@
 package com.RecipeFinderBackend.RecipeFinder.recipe;
-import com.RecipeFinderBackend.RecipeFinder.ingredientcategories.IngredientCategory;
+
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
+//import com.RecipeFinderBackend.RecipeFinder.reciperequirements.RecipeRequirement;
 import com.RecipeFinderBackend.RecipeFinder.users.User;
 
 import javax.persistence.*;
@@ -55,15 +56,20 @@ public class Recipe {
     )
     double averageRating;
 
+//    @OneToMany(mappedBy = "recipe")
+//    private List<RecipeRequirement> recipeRequirements;
+
+
     @OneToMany(
             cascade = {CascadeType.PERSIST, CascadeType.REMOVE},
             mappedBy = "recipe"
     )
     private List<RecipeIngredients> recipeIngredients = new ArrayList<>();
 
-        @ManyToOne
-        @JoinColumn(name = "user_id")
-        private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
     // Constructors

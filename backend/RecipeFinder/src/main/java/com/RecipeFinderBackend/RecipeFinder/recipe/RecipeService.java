@@ -28,6 +28,9 @@ public class RecipeService {
         }
 
         // need a method which returns recipe name, description,
+        public List<Recipe> getRecipeByName(String recipeName) {
+            getAllRecipes()
+        }
 
         @Transactional
         public void addRecipe(String recipeName,

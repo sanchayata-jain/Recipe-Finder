@@ -60,10 +60,4 @@ public class IngredientCategory {
         return ingredientCategoryName;
     }
 
-    public void addToIngredients(Ingredient ingredient) {
-        if (!ingredients.contains(ingredient)) {
-            ingredients.add(ingredient);
-        }
-    }
-
 }

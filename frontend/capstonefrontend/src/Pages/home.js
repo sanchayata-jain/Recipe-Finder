@@ -1,9 +1,9 @@
 
 import React from 'react';
 import './home.css';
-import './nav.css';
-import Nav from './nav';
-import food from './food3.jpg';
+import '../Components/nav.css';
+import Nav from '../Components/nav';
+import food from '../Resources/food3.jpg';
 
    
 
