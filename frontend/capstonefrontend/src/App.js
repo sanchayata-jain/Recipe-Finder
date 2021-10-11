@@ -8,9 +8,11 @@ import findrecipes from './Components/findrecipes';
 import signup from './Components/signup';
 
 
+
 function App() {
   return (
     <div className="App">
+    
       <Switch>
       <Route path = '/'  component={home} exact/>
       <Route path ='/searchingredient' component={searchingredient} exact/>
