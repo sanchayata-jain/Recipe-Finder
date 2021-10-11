@@ -7,6 +7,7 @@ import './signup.css'
 
 export default class signup extends React.Component {
     state= {
+        name: " ",
         email: " ",
         password: " "
     };
