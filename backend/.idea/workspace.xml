@@ -4,51 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c078cbf4-4227-469d-9083-4de1db83e93e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/RecipeFinderApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/exceptions/AlreadyExistsException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/exceptions/IncorrectCredentialException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/exceptions/NotAllowedToModify.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/exceptions/NotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/exceptions/UserNotLoggedIn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredientcategories/IngredientCategory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredientcategories/IngredientCategoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredientcategories/IngredientCategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredientcategories/IngredientCategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredients/Ingredient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredients/IngredientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredients/IngredientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/ingredients/IngredientsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipe/Recipe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipe/RecipeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipe/RecipeDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipe/RecipeDifficulty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipe/RecipeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipe/RecipeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipeingredients/RecipeIngredients.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipeingredients/RecipeIngredientsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipeingredients/RecipeIngredientsId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipeingredients/RecipeIngredientsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/recipeingredients/RecipeIngredientsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/reciperequirements/RecipeRequirement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/reciperequirements/RecipeRequirementId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/reciperequirements/Requirements.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/users/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/users/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/users/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/RecipeFinderBackend/RecipeFinder/users/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/RecipeFinderBackend/RecipeFinder/RecipeFinderApplicationTests.java" beforeDir="false" />
-    </list>
+    <list default="true" id="c078cbf4-4227-469d-9083-4de1db83e93e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
