@@ -1,7 +1,10 @@
 package com.RecipeFinderBackend.RecipeFinder.recipe;
 
 import com.RecipeFinderBackend.RecipeFinder.exceptions.UserNotLoggedIn;
+import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
 import com.RecipeFinderBackend.RecipeFinder.users.UserService;
+import org.javatuples.Quintet;
+import org.javatuples.Triplet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +33,8 @@ public class RecipeController {
     }
 
     @GetMapping("/{recipeName}")
-    public List<Recipe> getRecipesByName(@PathVariable String recipeName) {
+    public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipesByName(@PathVariable String recipeName) {
+        recipeName.replace("%20", " ");
         return recipeService.getRecipeByName(recipeName);
     }
 
