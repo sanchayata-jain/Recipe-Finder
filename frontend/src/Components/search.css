@@ -1,0 +1,46 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.Search {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 255px;
+    left: 55px;
+    right: 0px;
+    text-align:center;
+    
+   
+}
+.Search input {
+    height: 30px;
+    width: 500px;
+    font-size: 30px;
+    border-radius: 15px;
+}
+
+.Search button {
+    top: 255px;
+    height:50px;
+    /* width: 100px; */ 
+    font: bold 1rem Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#f4f4f4;
+    margin: 4 1rem;
+    padding: 1rem;
+    background: rgba(0,0,0,0.7);
+    
+}
+
+h1 {
+    color:white;   
+    font-size: 80px;
+}
