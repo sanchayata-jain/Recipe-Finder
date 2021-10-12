@@ -4,8 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import home from './Pages/home';
 import searchingredient from './Pages/searchingredient';
 import Search from './Components/search';
-import findrecipes from './Pages/findrecipes';
+import findrecipecontainer from './Containers/findrecipecontainer';
 import signup from './Pages/signup';
+import findrecipe from './Pages/findrecipes';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Switch>
       <Route path = '/'  component={home} exact/>
       <Route path ='/searchingredient' component={searchingredient} exact/>
-      <Route path ='/findrecipes' component={findrecipes} exact/>
+      <Route path ='/findrecipes' component={findrecipe} exact/>
       <Route path ='/signup' component={signup} exact/>
       </Switch>
       {/* <Search /> */}

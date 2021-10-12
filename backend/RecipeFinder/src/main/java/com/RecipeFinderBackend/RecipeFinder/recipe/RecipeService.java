@@ -1,11 +1,17 @@
 package com.RecipeFinderBackend.RecipeFinder.recipe;
 
 import com.RecipeFinderBackend.RecipeFinder.exceptions.NotAllowedToModify;
+import com.RecipeFinderBackend.RecipeFinder.exceptions.NotFoundException;
+import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
+import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredientsRepository;
 import com.RecipeFinderBackend.RecipeFinder.users.User;
+import org.javatuples.Quintet;
+import org.javatuples.Triplet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,9 +21,11 @@ public class RecipeService {
 
     @Autowired
     private RecipeRepository recipeRepository;
+    private RecipeIngredientsRepository recipeIngredientsRepository;
 
-    public RecipeService(RecipeRepository recipeRepository) {
+    public RecipeService(RecipeRepository recipeRepository, RecipeIngredientsRepository recipeIngredientsRepository) {
         this.recipeRepository = recipeRepository;
+        this.recipeIngredientsRepository = recipeIngredientsRepository;
     }
 
 
@@ -27,10 +35,42 @@ public class RecipeService {
             return recipeRepository.findAll();
         }
 
-        // need a method which returns recipe name, description,
-        public List<Recipe> getRecipeByName(String recipeName) {
-            getAllRecipes()
+    // need a method which returns recipe name, description,
+    public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipeByName(String recipeName) {
+
+        List<Recipe> recipes = getAllRecipes();
+        List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> requestedRecipes = new ArrayList<>();
+        List<Triplet<String, Double, String>> ingredientsNames = new ArrayList<>();
+        boolean requestedRecipeFound = false;
+
+        for (Recipe recipe : recipes) {
+            if (recipe.getRecipeName().contains(recipeName)) {
+                String name = recipe.getRecipeName();
+                String description = recipe.getRecipeDescription();
+                String recipeAuthor = recipe.getUser().getUserName();
+                String difficulty = recipe.getDifficulty().toString();
+                List<RecipeIngredients> ingredients = recipeIngredientsRepository.findIngredientsByRecipeId(recipe.getId());
+                for (RecipeIngredients ingredient : ingredients) {
+                    String ingredientName =  ingredient.getIngredient().getIngredientName();
+                    Double ingredientQuantity = ingredient.getMeasurementQuantity();
+                    String measurementType = ingredient.getMeasurementType();
+
+                    Triplet<String, Double, String> ingredientInfo = new Triplet<>(ingredientName, ingredientQuantity, measurementType);
+                    ingredientsNames.add(ingredientInfo);
+                }
+
+                Quintet<String, String, String, String, List<Triplet<String, Double, String>>> recipeInfo = new Quintet<>(name, description, recipeAuthor, difficulty, ingredientsNames);
+                requestedRecipes.add(recipeInfo);
+                requestedRecipeFound = true;
+            }
         }
+        if (!requestedRecipeFound) {
+            throw new NotFoundException("Sorry we could not find any recipes with this name");
+        }
+
+        return requestedRecipes;
+
+    }
 
         @Transactional
         public void addRecipe(String recipeName,

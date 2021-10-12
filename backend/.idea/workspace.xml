@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c078cbf4-4227-469d-9083-4de1db83e93e" name="Changes" comment="" />
+    <list default="true" id="c078cbf4-4227-469d-9083-4de1db83e93e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/@babel/plugin-transform-runtime/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/@typescript-eslint/typescript-estree/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/@typescript-eslint/typescript-estree/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/@typescript-eslint/typescript-estree/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/babel-preset-react-app/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/babel-preset-react-app/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/babel-preset-react-app/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/eslint-plugin-react/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/eslint-plugin-react/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/eslint-plugin-react/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/fork-ts-checker-webpack-plugin/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/fork-ts-checker-webpack-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/fork-ts-checker-webpack-plugin/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/istanbul-lib-instrument/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/react-dev-utils/node_modules/.bin/node-which" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/react-dev-utils/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/react-dev-utils/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/resolve-url-loader/node_modules/.bin/json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/resolve-url-loader/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/resolve-url-loader/node_modules/.bin/json5.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/terser-webpack-plugin/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/terser-webpack-plugin/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/terser-webpack-plugin/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/webpack-dev-server/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/webpack-dev-server/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/webpack-dev-server/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/webpack/node_modules/.bin/acorn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/webpack/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/node_modules/webpack/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/capstonefrontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/capstonefrontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/capstonefrontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/capstonefrontend/src/Containers/findrecipecontainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/capstonefrontend/src/Containers/findrecipecontainer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,8 +91,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EthicalClothing" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="RecipeFinderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
