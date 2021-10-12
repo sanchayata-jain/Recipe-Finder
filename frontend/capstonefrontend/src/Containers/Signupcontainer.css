@@ -1,0 +1,10 @@
+.signup{
+    display: block;
+}
+.sign{
+    display: block;
+    
+    position: relative;
+    left: 200px;
+    top:200px
+}
