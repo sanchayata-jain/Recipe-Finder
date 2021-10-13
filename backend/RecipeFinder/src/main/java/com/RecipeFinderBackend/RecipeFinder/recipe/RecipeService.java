@@ -5,6 +5,7 @@ import com.RecipeFinderBackend.RecipeFinder.exceptions.NotFoundException;
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredientsRepository;
 import com.RecipeFinderBackend.RecipeFinder.users.User;
+import org.javatuples.Quartet;
 import org.javatuples.Quintet;
 import org.javatuples.Triplet;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,34 @@ public class RecipeService {
             // this method will only return details stored in the recipes table,
             // not any of the ingredients which are needed to make the recipe
             return recipeRepository.findAll();
+        }
+
+        public List<Quartet<String, String, String, List<Triplet<String, Double, String>>>> getMyRecipes(long userId) {
+            List<Recipe> myRecipes = recipeRepository.findMyRecipes(userId);
+            List<Quartet<String, String, String, List<Triplet<String, Double, String>>>> myRecipesDetails = new ArrayList<>();
+            List<Triplet<String, Double, String>> ingredientsNames = new ArrayList<>();
+            if (!myRecipes.isEmpty()) {
+                for (Recipe myRecipe : myRecipes) {
+                    String name = myRecipe.getRecipeName();
+                    String description = myRecipe.getRecipeDescription();
+                    String difficulty = myRecipe.getDifficulty().toString();
+                    List<RecipeIngredients> ingredients = recipeIngredientsRepository.findIngredientsByRecipeId(myRecipe.getId());
+                    for (RecipeIngredients ingredient : ingredients) {
+                        String ingredientName = ingredient.getIngredient().getIngredientName();
+                        Double ingredientQuantity = ingredient.getMeasurementQuantity();
+                        String measurementType = ingredient.getMeasurementType();
+
+                        Triplet<String, Double, String> ingredientInfo = new Triplet<>(ingredientName, ingredientQuantity, measurementType);
+                        ingredientsNames.add(ingredientInfo);
+                    }
+                    Quartet<String, String, String, List<Triplet<String, Double, String>>> recipeInfo = new Quartet<>(name, description, difficulty, ingredientsNames);
+                    myRecipesDetails.add(recipeInfo);
+                }
+            } else {
+                throw new NotFoundException("You have no uploaded recipes");
+            }
+
+            return myRecipesDetails;
         }
 
         // need a method which returns recipe name, description,

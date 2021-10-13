@@ -3,6 +3,8 @@ package com.RecipeFinderBackend.RecipeFinder.recipeingredients;
 import com.RecipeFinderBackend.RecipeFinder.exceptions.UserNotLoggedIn;
 import com.RecipeFinderBackend.RecipeFinder.users.UserService;
 import org.javatuples.Quartet;
+import org.javatuples.Quintet;
+import org.javatuples.Triplet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,6 +40,14 @@ public class RecipeIngredientsController {
         return recipeIngredientsService.getRecipeNamesUsingIngredientsEntered(ingredientName1,
                                                                               ingredientName2,
                                                                               ingredientName3);
+    }
+
+    @GetMapping("/get-recipes-by-ingredient")
+    public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipesByIngredient(@RequestParam String ingredientName1,
+                                                                                                                 @RequestParam(required = false) String ingredientName2,
+                                                                                                                 @RequestParam(required = false) String ingredientName3) {
+        ingredientName1.replace("%20", " ");
+        return recipeIngredientsService.getRecipesByIngredient(ingredientName1);
     }
 
 

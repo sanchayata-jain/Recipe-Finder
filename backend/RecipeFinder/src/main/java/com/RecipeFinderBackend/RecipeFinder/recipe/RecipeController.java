@@ -3,6 +3,7 @@ package com.RecipeFinderBackend.RecipeFinder.recipe;
 import com.RecipeFinderBackend.RecipeFinder.exceptions.UserNotLoggedIn;
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
 import com.RecipeFinderBackend.RecipeFinder.users.UserService;
+import org.javatuples.Quartet;
 import org.javatuples.Quintet;
 import org.javatuples.Triplet;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,18 @@ public class RecipeController {
         recipeName.replace("%20", " ");
         return recipeService.getRecipeByName(recipeName);
     }
+
+
+    @GetMapping("get-my-recipes")
+    public List<Quartet<String, String, String, List<Triplet<String, Double, String>>>> getMyRecipes() {
+        if (userService.isUserLoggedIn()) {
+            return recipeService.getMyRecipes(userService.getLoggedInUser().getId());
+        } else {
+            throw new UserNotLoggedIn("Please log in to view your recipes");
+        }
+
+    }
+
 
     @PostMapping("/add-recipe")
     @ResponseBody
@@ -78,6 +91,8 @@ public class RecipeController {
 
             recipeService.updateRecipe(recipeName, updatedRecipeDescription,
                                        updatedRecipeDifficulty, userService.getLoggedInUser().getId());
+        } else {
+            throw new UserNotLoggedIn("Please log in to edit one of your recipes");
         }
 
     }

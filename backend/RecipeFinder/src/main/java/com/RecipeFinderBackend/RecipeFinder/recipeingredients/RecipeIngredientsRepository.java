@@ -23,4 +23,8 @@ public interface RecipeIngredientsRepository extends JpaRepository<RecipeIngredi
     nativeQuery = true)
     RecipeIngredients findRecipeIngredient(@Param("recipeId") long recipeId,
                                            @Param("ingredientId") long ingredientId);
+
+    @Query(value = "SELECT * FROM recipe_ingredients where ingredient_name = :ingredientName",
+            nativeQuery = true)
+    List<RecipeIngredients> findRecipeIngredientByName(@Param("ingredientName") String ingredientName);
 }

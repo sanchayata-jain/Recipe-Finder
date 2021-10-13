@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import '../Components/findsearchbar.css';
-import { useHistory, Redirect } from 'react-router-dom';
+
 
 class SearchByIngredientContainer extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class SearchByIngredientContainer extends React.Component {
           recipes: [],
           ingredient: '',
           redirect: false,
-          select: ''
+          recipe: ''
         }
     
         this.getRecipes = this.getRecipes.bind(this);
@@ -24,7 +24,7 @@ class SearchByIngredientContainer extends React.Component {
     }
       
     getRecipes() {
-        axios.get('http://localhost:8080/recipe-ingredients/get-recipe-names', {params: {ingredientName1: this.state.ingredient} })
+        axios.get('http://localhost:8080/recipe-ingredients/get-recipes-by-ingredient', {params: {ingredientName1: this.state.ingredient} })
           .then(res => {
             const recipes = res.data;
             this.setState({ recipes });
@@ -47,22 +47,21 @@ class SearchByIngredientContainer extends React.Component {
     gotoRecipe = (index) => {
         this.setState ({
             redirect: true,
-            select: this.state.recipes[index]
+            recipe: this.state.recipes[index]
             
         })
-        // console.log(this.state.recipes[index]);
     }
 
-    renderRecipe = () => {
-        if (this.state.redirect) {
+    // renderRecipe = () => {
+    //     if (this.state.redirect) {
             
             
-            return (<Redirect to={{
-                                    pathname:`/recipes`,
-                                    state: {recipe: this.state.select}
-                                }} />)
-        }
-    }
+    //         return (<Redirect to={{
+    //                                 pathname:`/recipes`,
+    //                                 state: {recipe: this.state.select}
+    //                             }} />)
+    //     }
+    // }
 
   
 
@@ -91,11 +90,15 @@ class SearchByIngredientContainer extends React.Component {
                         <div>
                             {recipes.map((r, index) =>
                                 <span key={r}>
-                                    <div>
-                                        {this.renderRecipe()}
-                                        <div onClick={() => this.gotoRecipe(index)}>
-                                        <strong><font color="#C86428">{r}</font></strong>
-                                        </div>
+                                    <div className="found-recipe">
+                                        {/* {this.renderRecipe()} */}
+                                        {/* <div onClick={() => this.gotoRecipe(index)}> */}
+                                        {/* <strong><font color="#f4f4f4">{r}</font></strong> */}
+                                        {/* </div> */}
+                                        {recipes.map(recipe => <li key = {1}>{recipe.value0}</li>)}
+                                        {recipes.map(recipe => <li key = {2}>{recipe.value1}</li>)}
+                                        {recipes.map(recipe => <li key = {3}>{recipe.value2}</li>)}
+                                        {recipes.map(recipe => <li key = {4}>{recipe.value3}</li>)}
                                     </div>
                                
                                 </span>)
