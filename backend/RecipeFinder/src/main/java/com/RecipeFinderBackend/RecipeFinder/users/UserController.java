@@ -14,8 +14,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public void userLogIn(@RequestParam String email, @RequestParam String password) {
-        userService.userLogIn(email, password);
+    public void userLogIn(@RequestParam String userEmail, @RequestParam String userPassword) {
+        userService.userLogIn(userEmail, userPassword);
     }
 
     @PostMapping("/logout")

@@ -29,11 +29,6 @@ public class RecipeController {
         return recipeService.getAllRecipes();
     }
 
-    @GetMapping("/{recipeName}")
-    public List<Recipe> getRecipesByName(@PathVariable String recipeName) {
-        return recipeService.getRecipeByName(recipeName);
-    }
-
     @PostMapping("/add-recipe")
     @ResponseBody
     public void addRecipe(@RequestParam String recipeName,
@@ -44,7 +39,7 @@ public class RecipeController {
             recipeDescription.replace("%20", " ");
             recipeDescription.replace("%0A", " ");
             recipeService.addRecipe(recipeName, recipeDescription,
-                                    difficulty, userService.getLoggedInUser());
+                    difficulty, userService.getLoggedInUser());
 
         } else {
             throw new UserNotLoggedIn("You need to log in to add a recipe");
@@ -73,7 +68,7 @@ public class RecipeController {
             }
 
             recipeService.updateRecipe(recipeName, updatedRecipeDescription,
-                                       updatedRecipeDifficulty, userService.getLoggedInUser().getId());
+                    updatedRecipeDifficulty, userService.getLoggedInUser().getId());
         }
 
     }

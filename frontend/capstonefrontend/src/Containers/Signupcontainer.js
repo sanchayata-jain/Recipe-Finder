@@ -4,6 +4,7 @@ import Nav from '../Components/nav.js';
 import food4 from '../Resources/food5.jpg';
 import axios from 'axios';
 import './Signupcontainer.css'
+
 export default class Signupcontainer extends React.Component {
     constructor(props) {
         super(props);
@@ -44,6 +45,7 @@ export default class Signupcontainer extends React.Component {
     
       render() {
         return (
+          
           <div>
             <form onSubmit={this.handleSubmit}>
               <div className="signup">
@@ -79,6 +81,7 @@ export default class Signupcontainer extends React.Component {
               </div>
             </form>
           </div>
+          
         );
       }
       
