@@ -6,6 +6,7 @@ import searchingredient from './Pages/searchingredient';
 import Search from './Components/search';
 import findrecipes from './Pages/findrecipes';
 import signup from './Pages/signup';
+import profile from './Pages/profile';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path ='/searchingredient' component={searchingredient} exact/>
       <Route path ='/findrecipes' component={findrecipes} exact/>
       <Route path ='/signup' component={signup} exact/>
+      <privateRoute path = '/profile' component={profile} exact/>
       </Switch>
       {/* <Search /> */}
     </div>

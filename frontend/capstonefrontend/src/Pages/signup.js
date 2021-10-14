@@ -4,13 +4,16 @@ import Nav from '../Components/nav';
 import food4 from '../Resources/food5.jpg';
 import Signupcontainer from '../Containers/Signupcontainer';
 import Logincontainer from '../Containers/Logincontainer';
+import Card from '../Components/Card';
 
 export default function signup() {
     return (
         <div className= "ingredient-container" style={{ backgroundImage: `url(${food4})`, backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
         <div>  
                 <Nav/>
+                <Card  />
                 <Signupcontainer />
+               
                 <Logincontainer/>
             </div>
             </div>

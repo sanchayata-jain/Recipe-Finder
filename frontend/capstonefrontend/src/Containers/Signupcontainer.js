@@ -3,6 +3,7 @@ import '../Components/nav.css';
 import Nav from '../Components/nav.js';
 import food4 from '../Resources/food5.jpg';
 import axios from 'axios';
+import { Container } from 'react-bootstrap';
 import './Signupcontainer.css'
 
 export default class Signupcontainer extends React.Component {
@@ -45,7 +46,7 @@ export default class Signupcontainer extends React.Component {
     
       render() {
         return (
-          
+          <Container className="register">
           <div>
             <form onSubmit={this.handleSubmit}>
               <div className="signup">
@@ -74,13 +75,15 @@ export default class Signupcontainer extends React.Component {
                 onChange={this.handleChange}
                 required
               />
-    
-              
-    
-              <button className="sign" type="submit">Register</button>
-              </div>
+              <div className="register-button">
+             <button className="sign" type="submit">Register</button>
+             </div>
+               
+             </div>
             </form>
           </div>
+          </Container>
+             
           
         );
       }

@@ -1,5 +1,8 @@
 import React from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import { Container } from 'react-bootstrap';
+import './Logincontainer.css'
+import { Redirect } from 'react-router';
 
 
 export default class Logincontainer extends React.Component{
@@ -25,20 +28,25 @@ export default class Logincontainer extends React.Component{
    .then(response => {
     if (response.data.logged_in) {
       this.props.handleSuccessfulAuth(response.data);
+     
     }
   }) 
   .catch(error => {
     console.log("login error", error);
+    alert("this is not correct")
+    
   });
   
         event.preventDefault();
    }
-   handleClick= (addEventListener)
+//    handleClick= (addEventListener)
    render() {
+       
     return (
+        <Container className="signin-box">
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input
+          <input className="login"
             type="email"
             name="email"
             placeholder="email"
@@ -47,7 +55,7 @@ export default class Logincontainer extends React.Component{
             required
           />
 
-          <input
+          <input className="login"
             type="password"
             name="password"
             placeholder="Password"
@@ -56,9 +64,10 @@ export default class Logincontainer extends React.Component{
             required
           />
 
-          <button type="submit" onClick={this.handleClick}>Login</button>
+          <button type="submit" >Login</button>
         </form>
       </div>
+      </Container>
     );
   }
        

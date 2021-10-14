@@ -1,10 +1,24 @@
-.signup{
-    display: block;
-}
-.sign{
-    display: block;
-    
+.register{
+    display:block;
     position: relative;
     left: 250px;
-    top:200px
+    top:200px;
+
+}
+
+.sign{
+    
+    display:block;
+    
+    
+}
+input{
+    margin-block: 8px;
+    height: 1.5em;
+    width:15em;
+    border: radius 50px;
+}
+.register-button{
+    position: relative;
+    left:65px;
 }

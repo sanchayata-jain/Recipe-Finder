@@ -1,0 +1,13 @@
+.signin-box{
+    background-color: aliceblue;
+    height:auto;
+    
+    width:max-content;
+    position: relative;
+    left:500px;
+    top:68.5px
+
+}
+.login{
+    display: block;
+}
