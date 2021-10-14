@@ -27,7 +27,11 @@ export default class Logincontainer extends React.Component{
    axios.post(`http://localhost:8081/api/users/login`,null,{ params: { userEmail: email, userPassword: password }})
    .then(response => {
     if (response.data.logged_in) {
-      this.props.handleSuccessfulAuth(response.data);
+      this.props.handleSuccessfulAuth(response.data).then(
+        () => {
+          return <Redirect to="/profile" />
+        }) 
+      
      
     }
   }) 
@@ -39,7 +43,8 @@ export default class Logincontainer extends React.Component{
   
         event.preventDefault();
    }
-//    handleClick= (addEventListener)
+   
+   
    render() {
        
     return (
@@ -63,8 +68,8 @@ export default class Logincontainer extends React.Component{
             onChange={this.handleChange}
             required
           />
-
-          <button type="submit" >Login</button>
+          
+          <button type="submit" id="login-button">Login</button>
         </form>
       </div>
       </Container>

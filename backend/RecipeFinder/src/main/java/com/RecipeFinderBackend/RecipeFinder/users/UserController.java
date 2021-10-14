@@ -1,5 +1,6 @@
 package com.RecipeFinderBackend.RecipeFinder.users;
 
+import com.RecipeFinderBackend.RecipeFinder.exceptions.UserNotLoggedIn;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -23,11 +24,23 @@ public class UserController {
         userService.userLogsOut();
     }
 
-    @GetMapping("/user-account-details")
-    public User getUserAccountDetails(@RequestParam String email,
-                                      @RequestParam String password) {
+//    @GetMapping("/user-account-details")
+//    public User getUserAccountDetails(@RequestParam String email,
+//                                      @RequestParam String password) {
+//
+//        return userService.getUserAccountDetails(email, password);
+//    }
 
-        return userService.getUserAccountDetails(email, password);
+    @GetMapping("/user-account-details")
+    public User getUserAccountDetails() {
+        if (userService.isUserLoggedIn()) {
+            String email = userService.getLoggedInUser().getEmail();
+            String password = userService.getLoggedInUser().getPassword();
+            return userService.getUserAccountDetails(email, password);
+        } else {
+            throw new UserNotLoggedIn("Please log in to view your profile");
+        }
+
     }
 
 

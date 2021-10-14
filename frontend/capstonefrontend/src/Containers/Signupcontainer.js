@@ -76,6 +76,7 @@ export default class Signupcontainer extends React.Component {
                 required
               />
               <div className="register-button">
+                
              <button className="sign" type="submit">Register</button>
              </div>
                
