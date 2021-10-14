@@ -2,8 +2,6 @@ import React from 'react';
 import './findsearchbar.css';
 
 
-
-
 const SearchBarFind = () => (
     
 
