@@ -33,8 +33,8 @@ public class RecipeController {
         return recipeService.getAllRecipes();
     }
 
-    @GetMapping("/{recipeName}")
-    public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipesByName(@PathVariable String recipeName) {
+    @GetMapping("/get-recipes")
+    public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipesByName(@RequestParam String recipeName) {
         recipeName.replace("%20", " ");
         return recipeService.getRecipeByName(recipeName);
     }

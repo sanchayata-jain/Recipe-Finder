@@ -4,6 +4,7 @@ import com.RecipeFinderBackend.RecipeFinder.exceptions.NotAllowedToModify;
 import com.RecipeFinderBackend.RecipeFinder.exceptions.NotFoundException;
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredientsRepository;
+import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeDTO;
 import com.RecipeFinderBackend.RecipeFinder.users.User;
 import org.javatuples.Quartet;
 import org.javatuples.Quintet;
@@ -26,7 +27,8 @@ public class RecipeService {
 
     // Constructor
     public RecipeService(RecipeRepository recipeRepository,
-                         RecipeIngredientsRepository recipeIngredientsRepository) {
+                         RecipeIngredientsRepository recipeIngredientsRepository,
+                         RecipeDTO recipeDTO) {
 
         this.recipeRepository = recipeRepository;
         this.recipeIngredientsRepository = recipeIngredientsRepository;

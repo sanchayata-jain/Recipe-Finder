@@ -1,0 +1,30 @@
+.recipes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-right:500px;
+    background-color:rgb(180, 169, 147);
+    color:white;
+    font-family:'Playfair';
+    text-align: left;
+    padding-left:30px;
+}
+
+.recipe-name {
+    font-size: 500%;
+    margin-top: 50px;
+}
+
+.recipe-author {
+    font-size: 200%;
+}
+
+/* .method-title {
+    font-size: 250%;
+} */
+
+.recipes pre {
+    font-family: 'Playfair';
+    white-space: pre-line;
+    line-height: 2rem;
+}

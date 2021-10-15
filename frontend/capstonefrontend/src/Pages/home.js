@@ -1,9 +1,9 @@
-
 import React from 'react';
 import './home.css';
 import '../Components/nav.css';
 import Nav from '../Components/nav';
-import food from '../Resources/food3.jpg';
+// import food from '../Resources/food3.jpg';
+import food from '../Resources/homepageBackground.jpeg';
 
    
 
@@ -11,22 +11,21 @@ import food from '../Resources/food3.jpg';
 export default function home() {
     return ( 
     
+        <div className = "overlay">
+            <div className= "home-container" style={{ backgroundImage: `url(${food})`, backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
 
-        <div className= "home-container" style={{ backgroundImage: `url(${food})`, backgroundSize: "cover", height:"100vh", backgroundPosition:"center"}}>
-
-        <div className= "background">
-            <div className = "left-section"> 
-                <p>Executive Pick of the Week</p>
-                <h1>Highlighted Reviews </h1>
-                <h1>Random Recipes</h1>
+            <div className= "background">
+                <div className = "middle-section"> 
+                    <h1>Cookbook</h1>
+                </div>
+                <div className="bottom-middle">
+                    <p>Change your mood with food</p>
+                </div>
             </div>
-            <div className ="right-section">
-                <h1>Most Popular Recipes of the Week</h1>
-            </div>
-        </div>
-        
-            <div>
-                <Nav/> 
+            
+                <div>
+                    <Nav/> 
+                </div>
             </div>
         </div>
         

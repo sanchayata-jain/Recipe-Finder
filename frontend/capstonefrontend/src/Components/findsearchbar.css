@@ -37,10 +37,12 @@
     margin: 4 1rem;
     padding: 1rem;
     background: rgba(0,0,0,0.7);
+    font-family: 'Playfair';
     
 }
 
 h1 {
     color:white;   
     font-size: 80px;
+    font-family: 'Playfair';
 }

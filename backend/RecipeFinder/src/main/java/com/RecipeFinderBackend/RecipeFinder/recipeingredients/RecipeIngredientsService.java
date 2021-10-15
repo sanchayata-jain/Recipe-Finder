@@ -2,13 +2,10 @@ package com.RecipeFinderBackend.RecipeFinder.recipeingredients;
 
 import com.RecipeFinderBackend.RecipeFinder.exceptions.NotAllowedToModify;
 import com.RecipeFinderBackend.RecipeFinder.exceptions.NotFoundException;
-import com.RecipeFinderBackend.RecipeFinder.exceptions.UserNotLoggedIn;
 import com.RecipeFinderBackend.RecipeFinder.ingredients.Ingredient;
 import com.RecipeFinderBackend.RecipeFinder.ingredients.IngredientsRepository;
 import com.RecipeFinderBackend.RecipeFinder.recipe.Recipe;
 import com.RecipeFinderBackend.RecipeFinder.recipe.RecipeRepository;
-import com.RecipeFinderBackend.RecipeFinder.recipe.RecipeService;
-import com.RecipeFinderBackend.RecipeFinder.users.UserService;
 import org.javatuples.Quartet;
 import org.javatuples.Quintet;
 import org.javatuples.Triplet;
@@ -38,6 +35,7 @@ public class RecipeIngredientsService {
         this.recipeIngredientsRepository = recipeIngredientsRepository;
         this.ingredientsRepository = ingredientsRepository;
         this.recipeRepository = recipeRepository;
+
     }
 
      //Methods
@@ -72,7 +70,59 @@ public class RecipeIngredientsService {
     }
 
 
-    // need a method which returns recipe name, description,
+
+
+//    public List<RecipeDTO> getRecipesByIngredient(String ingredientName) {
+//        long ingredientId = ingredientsRepository.findIngredientIdByName(ingredientName);
+//        List<Recipe> recipes = new ArrayList<>();
+//        List<RecipeDTO> recipesInfo = new ArrayList<>();
+//        List<RecipeIngredients> recipeIngredients =recipeIngredientsRepository.findRecipeIngredientsByIngredientId(ingredientId);
+//
+//        for (RecipeIngredients recipeIngredient : recipeIngredients) {
+//            recipes.add(recipeIngredient.getRecipe());
+//        }
+//
+////        List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> requestedRecipes = new ArrayList<>();
+////        List<Triplet<String, Double, String>> ingredientsNames = new ArrayList<>();
+//        boolean requestedRecipeFound = false;
+//
+//        for (Recipe recipe : recipes) {
+//            if (recipe.getRecipeDescription().contains(ingredientName)) {
+//                String name = recipe.getRecipeName();
+//                String description = recipe.getRecipeDescription();
+//                String recipeAuthor = recipe.getUser().getUserName();
+//                String difficulty = recipe.getDifficulty().toString();
+//                List<RecipeIngredients> ingredients = recipeIngredientsRepository.findIngredientsByRecipeId(recipe.getId());
+////                for (RecipeIngredients ingredient : ingredients) {
+////                    String nameOfIngredient =  ingredient.getIngredient().getIngredientName();
+////                    Double ingredientQuantity = ingredient.getMeasurementQuantity();
+////                    String measurementType = ingredient.getMeasurementType();
+////                    Triplet<String, Double, String> ingredientInfo = new Triplet<>(nameOfIngredient, ingredientQuantity, measurementType);
+////                    ingredientsNames.add(ingredientInfo);
+////                }
+//
+////                Quintet<String, String, String, String, List<Triplet<String, Double, String>>> recipeInfo = new Quintet<>(name, description, recipeAuthor, difficulty, ingredientsNames);
+////                requestedRecipes.add(recipeInfo);
+//                RecipeDTO recipeDTO = new RecipeDTO();
+//                recipeDTO.setName(name);
+//                recipeDTO.setRecipeDescription(description);
+//                recipeDTO.setRecipeAuthor(recipeAuthor);
+//                recipeDTO.setDifficulty(difficulty);
+//
+//                recipesInfo.add(recipeDTO);
+//
+//                requestedRecipeFound = true;
+//            }
+//        }
+//        if (!requestedRecipeFound) {
+//            throw new NotFoundException("Sorry we could not find any recipes containing this ingredient");
+//        }
+//        return recipesInfo;
+//    }
+
+
+
+    //need a method which returns recipe name, description,
     public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipesByIngredient(String ingredientName) {
        long ingredientId = ingredientsRepository.findIngredientIdByName(ingredientName);
        List<Recipe> recipes = new ArrayList<>();

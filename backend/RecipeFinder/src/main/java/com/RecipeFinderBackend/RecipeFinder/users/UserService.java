@@ -70,7 +70,8 @@ public class UserService {
     }
 
     public User getUserAccountDetails(String email, String password) {
-      return findUserAccount(email, password);
+
+        return findUserAccount(email, password);
     }
 
     @Transactional

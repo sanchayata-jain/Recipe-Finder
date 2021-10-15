@@ -1,7 +1,6 @@
 package com.RecipeFinderBackend.RecipeFinder.recipe;
 
 import com.RecipeFinderBackend.RecipeFinder.recipeingredients.RecipeIngredients;
-//import com.RecipeFinderBackend.RecipeFinder.reciperequirements.RecipeRequirement;
 import com.RecipeFinderBackend.RecipeFinder.users.User;
 
 import javax.persistence.*;
@@ -41,7 +40,8 @@ public class Recipe {
 
     @Column(
             name= "recipe_description",
-            nullable = false
+            nullable = false,
+            columnDefinition = "VARCHAR(10485760)"
     )
     private String recipeDescription;
 
@@ -55,9 +55,6 @@ public class Recipe {
            name = "average_rating"
     )
     double averageRating;
-
-//    @OneToMany(mappedBy = "recipe")
-//    private List<RecipeRequirement> recipeRequirements;
 
 
     @OneToMany(

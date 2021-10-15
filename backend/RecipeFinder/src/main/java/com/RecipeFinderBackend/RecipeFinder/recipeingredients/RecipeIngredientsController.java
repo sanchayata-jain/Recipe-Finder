@@ -18,7 +18,8 @@ public class RecipeIngredientsController {
     private final UserService userService;
 
     // Constructor
-    public RecipeIngredientsController(RecipeIngredientsService recipeIngredientsService, UserService userService) {
+    public RecipeIngredientsController(RecipeIngredientsService recipeIngredientsService,
+                                       UserService userService) {
         this.recipeIngredientsService = recipeIngredientsService;
         this.userService = userService;
     }
@@ -44,11 +45,17 @@ public class RecipeIngredientsController {
 
     @GetMapping("/get-recipes-by-ingredient")
     public List<Quintet<String, String, String, String, List<Triplet<String, Double, String>>>> getRecipesByIngredient(@RequestParam String ingredientName1,
-                                                                                                                 @RequestParam(required = false) String ingredientName2,
-                                                                                                                 @RequestParam(required = false) String ingredientName3) {
+                                                                                                                       @RequestParam(required = false) String ingredientName2,
+                                                                                                                       @RequestParam(required = false) String ingredientName3) {
         ingredientName1.replace("%20", " ");
         return recipeIngredientsService.getRecipesByIngredient(ingredientName1);
     }
+
+//    @GetMapping("/get-recipes-by-ingredient")
+//    public List<RecipeDTO>getRecipesByIngredient(@RequestParam String ingredientName1) {
+//        ingredientName1.replace("%20", " ");
+//        return recipeIngredientsService.getRecipesByIngredient((ingredientName1));
+//    }
 
 
     @PostMapping("/add")
