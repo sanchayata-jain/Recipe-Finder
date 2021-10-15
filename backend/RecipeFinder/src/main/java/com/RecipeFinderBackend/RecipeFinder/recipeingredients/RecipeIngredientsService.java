@@ -138,7 +138,7 @@ public class RecipeIngredientsService {
         boolean requestedRecipeFound = false;
 
         for (Recipe recipe : recipes) {
-            if (recipe.getRecipeDescription().contains(ingredientName)) {
+            if (recipe.getRecipeName().contains(ingredientName)) {
                 String name = recipe.getRecipeName();
                 String description = recipe.getRecipeDescription();
                 String recipeAuthor = recipe.getUser().getUserName();

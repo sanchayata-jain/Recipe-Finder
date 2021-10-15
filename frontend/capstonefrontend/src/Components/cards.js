@@ -2,10 +2,10 @@ import './cards.css'
 import React from 'react'
 
 
-function SignUpCard(props) {
+function AboutUsCard(props) {
     return (
         <div className="card" styles="width: 18rem;">
-            {/* <img src={props.imageSrc} className="card-img-top" alt="Hongkong city skyline in the evening" /> */}
+            <img src={props.imageSrc} className="card-img-top" alt="food" />
             <div className ="card-body">
                 <p className ="card-title">{props.form} </p>
             </div>
@@ -16,5 +16,5 @@ function SignUpCard(props) {
 
 
 export {
-    SignUpCard
+   AboutUsCard
 }

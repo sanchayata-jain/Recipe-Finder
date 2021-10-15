@@ -2,7 +2,6 @@ import React from 'react';
 import './home.css';
 import '../Components/nav.css';
 import Nav from '../Components/nav';
-// import food from '../Resources/food3.jpg';
 import food from '../Resources/homepageBackground.jpeg';
 
    

@@ -9,7 +9,8 @@ export default function Profile() {
         // </div>
         <div>  
             <Nav/>
-            <Useraccount/>
+            <h1>Your Details</h1>
+            {/* <Useraccount/> */}
         </div>
         
     );

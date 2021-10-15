@@ -8,6 +8,7 @@ import findrecipes from './Pages/findrecipes';
 import signup from './Pages/signup';
 import Recipes from './Pages/recipes';
 import Profile from './Pages/profile';
+import AboutUs from './Pages/aboutus';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path ='/signup' component={signup} exact/>
       <Route path = '/recipes' component={Recipes} exact/>
       <Route path = '/profile' component={Profile} exact/>
+      <Route path = '/aboutus' component={AboutUs} exact/>
       </Switch>
       {/* <Search /> */}
     </div>

@@ -6,7 +6,7 @@ export default class Useraccount extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          user: []
+          user: {}
     
         }
     
@@ -15,11 +15,10 @@ export default class Useraccount extends Component {
       
       componentDidMount() {
         this.getUsers();
-        console.log(this.state);
       }
       
       getUsers(){
-        axios.get(`http://localhost:8080/api/users/user-account-details`)
+        axios.get('http://localhost:8080/api/users/user-account-details')
           .then(res => {
             const user = res.data;
             this.setState({ user });
@@ -30,7 +29,8 @@ export default class Useraccount extends Component {
         return (
             <div>
                  <h1>Your Details</h1>
-                 <div className="recipe-name">{this.state.user.user_name}</div>
+                 <div className="recipe-name">{this.state.user.email}</div>
+                 {console.log(this.state.user)}
             </div>
         )
     }
