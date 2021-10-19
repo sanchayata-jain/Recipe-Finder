@@ -1,0 +1,41 @@
+/* h3 {
+    color: white;
+}
+*/
+
+/* .overlay {
+    background-color: black;
+} */
+
+
+/* .home-container {
+    opacity: 0.9;
+    z-index: 1000;
+}  */
+
+
+p {
+    color: rgb(223, 66, 46);
+    font-family: 'Playfair';
+    font-style: italic;
+    font-size: 220%;
+    font-weight: 800;
+} 
+
+.bottom-middle {
+    margin-top: 250px;
+    margin-left: 400px;
+    position: fixed;;
+}
+
+
+.middle-section {
+    margin-top: 150px;
+    margin-left: 300px;
+    position: fixed;
+    font-family: 'Playfair';
+}
+
+.middle-section h1 {
+    color: rgb(223, 66, 46);
+}

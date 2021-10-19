@@ -1,0 +1,46 @@
+/* .recipe-result {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-right:600px;
+    background-color:rgb(17, 8, 1);
+    color:white;
+ 
+}
+
+.recipe-description {
+    display:block;
+    overflow-wrap: break-word;
+    
+} */
+
+
+.recipe-result {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-right:500px;
+    background-color:rgb(180, 169, 147);
+    color:white;
+    font-family:'Playfair';
+    text-align: left;
+    padding-left:30px;
+}
+
+.recipe-title {
+    font-size: 300%;
+}
+
+.recipe-author {
+    font-size: 200%;
+}
+
+/* .method-title {
+    font-size: 250%;
+} */
+
+.recipe-result pre {
+    font-family: 'Playfair';
+    white-space: pre-line;
+    line-height: 2rem;
+}

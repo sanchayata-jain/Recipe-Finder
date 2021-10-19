@@ -1,0 +1,155 @@
+
+
+
+.register{
+    /* display:block;
+    position: absolute;
+    left: 250px;
+    margin-top:250px;
+    background-color:rgba(255, 166, 0, 0.486);
+    color: aliceblue; */
+
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgba(205, 216, 224, 0.308);
+    width:40%;
+    align-items: center;
+    align-self: center;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 200px;
+    padding-top: 100px;
+    z-index: 9999;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-direction: column;
+    font-family: 'Playfair';
+    overflow: hidden;
+    /* border-radius: 25px;
+    border: 2px solid #73ad2100;
+    padding: 20px; */
+
+}
+
+.register form {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    color: antiquewhite;
+}
+
+.register input {
+    width: 100%;
+    padding-top:10px;
+    background-color: transparent;
+    overflow: hidden;
+    color: antiquewhite;
+    border: none;
+    border-bottom: 1px solid antiquewhite;
+}
+
+.button input {
+    background-color: rgba(255, 192, 203, 0.445);
+    transition: 0.2s all;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Playfair';
+    text-align: center;
+    
+}
+
+.button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+    cursor:pointer;
+}
+
+
+
+.sign{
+    
+    display:block;
+    width:15rem;
+    
+    
+}
+input{
+    margin-block: 8px;
+    height: 1.5em;
+    width:25em;
+    border: radius 50px;
+}
+.register-button{
+    position: relative;
+    left:65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .sign-up-form form {
+    transition: 0.3s;
+    border-radius: 0px;
+   
+    width:auto;
+    height: 400px;
+    align-items: center;
+    align-self: center;
+    margin-left: 10px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-direction: row;
+    font-family: 'Playfair';
+} */
+
+/*
+
+.sign-up-form form:hover {
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgb(219, 190, 180);
+    width:auto;
+    height: 400px;
+    align-items: center;
+    align-self: center;
+    margin-left: 10px;
+    overflow: hidden;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-direction: row;
+    font-family: 'Playfair';
+}
+
+
+.sign-up-form h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'Playfair';
+    font-size: 200%;
+    text-align: center;
+    position: absolute;
+    margin-left: 200px;
+    margin-right: auto;
+    
+
+} */

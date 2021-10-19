@@ -5,7 +5,11 @@
     display: flex;
     width: 100%;
     height: 60px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(245, 180, 180, 0);
+}
+
+.navbar:hover {
+    background: rgba(151, 145, 145, 0.705);
 }
 
 .navbar ul {
@@ -13,6 +17,8 @@
     list-style: none;
     width: 100%;
     justify-content: center;
+    font-family: 'Playfair';
+    font-weight: bold;
 }
 
 
@@ -24,10 +30,11 @@
 .navbar ul li a {
     text-decoration: none;
     text-transform: uppercase;
-    color:#f4f4f4;
+    color: rgb(238, 234, 231);
 
 }
 
 .navbar ul li a:hover {
-    color: skyblue;
+    color: rgb(203,59,41)
+    
 }

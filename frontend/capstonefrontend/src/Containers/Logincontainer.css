@@ -1,0 +1,82 @@
+.login-form{
+
+    transition: 0.3s;
+    border-radius: 0px;
+    background-color: rgba(205, 216, 224, 0.308);
+    width:40%;
+    align-items: center;
+    align-self: center;
+    margin-left: 650px;
+    margin-right: auto;
+    margin-top: 200px;
+    padding-top: 100px;
+    z-index: 9999;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-direction: column;
+    font-family: 'Playfair';
+    overflow: hidden;
+    /* border-radius: 25px;
+    border: 2px solid #73ad2100;
+    padding: 20px; */
+
+}
+
+.login-form form {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    color: antiquewhite;
+}
+
+.login-form input {
+    width: 100%;
+    padding-top:10px;
+    background-color: transparent;
+    overflow: hidden;
+    color: antiquewhite;
+    border: none;
+    border-bottom: 1px solid antiquewhite;
+}
+
+.button input {
+    background-color: rgba(255, 192, 203, 0.445);
+    transition: 0.2s all;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Playfair';
+    text-align: center;
+    
+}
+
+.button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+    cursor:pointer;
+}
+
+.user-input{
+    
+    display:block;
+    width:15rem;
+    
+    
+}
+input{
+    margin-block: 8px;
+    height: 1.5em;
+    width:25em;
+    border: radius 50px;
+}
+.register-button{
+    position: relative;
+    left:65px;
+}
