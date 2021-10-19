@@ -28,7 +28,7 @@ export default class Useraccount extends Component {
     render() {
         return (
             <div>
-                 <h1>Your Details</h1>
+                 <h5>Your Details</h5>
                  <div className="recipe-name">{this.state.user.email}</div>
                  {console.log(this.state.user)}
             </div>

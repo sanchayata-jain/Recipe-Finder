@@ -23,7 +23,6 @@ function App() {
       <Route path = '/profile' component={Profile} exact/>
       <Route path = '/aboutus' component={AboutUs} exact/>
       </Switch>
-      {/* <Search /> */}
     </div>
     
   );

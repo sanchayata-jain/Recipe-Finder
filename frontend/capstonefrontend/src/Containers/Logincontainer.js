@@ -33,7 +33,7 @@ export default class Logincontainer extends React.Component{
     if (response.data.logged_in) {
       this.props.handleSuccessfulAuth(response.data);
     }
-    this.setState({ redirect:true });
+    this.setState({ redirect:false });
     console.log(this.state);
   }) 
 
